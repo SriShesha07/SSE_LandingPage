@@ -49,6 +49,7 @@ const Services = () => {
     {
       icon: <FaCog />,
       title: 'Engineering Works',
+      tagline: 'Comprehensive engineering solutions for industrial applications. We provide design, installation, and maintenance services for various engineering projects.',
       description: 'We deliver end-to-end engineering solutions — from concept design and detailed engineering to on-site installation, commissioning, and preventive maintenance. Our team handles structural steelwork, plant layout optimization, equipment erection, and process-line integration for manufacturing facilities across automotive, FMCG, and heavy-industry sectors. Every project is executed with rigorous stage-wise quality checks, adherence to IS/ISO fabrication standards, and a focus on minimizing downtime so your production line keeps running.',
       images: [
         '/images/Engineering Works/Picture1.jpg',
@@ -70,6 +71,7 @@ const Services = () => {
     {
       icon: <FaIndustry />,
       title: 'Fabrication Works',
+      tagline: 'Expert fabrication services for custom industrial components. We specialize in precision metal fabrication, welding, and assembly for various industrial needs.',
       description: 'Our fabrication division specializes in precision cutting, bending, MIG/TIG welding, and full-assembly of custom industrial components — including frames, enclosures, platforms, chutes, hoppers, and machine guards. We work with mild steel, stainless steel, and aluminum to produce structures that meet exact dimensional tolerances and load-bearing specifications. From prototype to batch production, every piece undergoes in-process inspection and final dimensional verification before dispatch, ensuring it integrates seamlessly into your existing plant infrastructure.',
       images: [
         '/images/Fabrication Works/Picture1.jpg',
@@ -85,6 +87,7 @@ const Services = () => {
     {
       icon: <FaTruck />,
       title: 'Trolley Works',
+      tagline: 'Custom trolley design and manufacturing for material handling. We create durable, efficient trolley systems tailored to your specific industrial requirements.',
       description: 'We design and manufacture heavy-duty industrial trolleys engineered to streamline your shop-floor material movement. Whether you need platform trolleys for inter-station transfer, bin trolleys for component staging, die-change trolleys for press shops, or ESD-safe trolleys for electronics assembly — each unit is custom-built to your load capacity, dimensional, and ergonomic requirements. Constructed from robust steel with industrial-grade casters, powder-coated finishes, and optional locking mechanisms, our trolleys reduce manual handling effort, minimize part damage, and improve throughput across your production cycle.',
       images: [
         '/images/Trolley Works/Picture23.jpg',
@@ -98,6 +101,7 @@ const Services = () => {
     {
       icon: <FaBoxes />,
       title: 'Rack Works',
+      tagline: 'Industrial rack systems for efficient storage and organization. We design and install custom rack solutions to optimize your warehouse and production space.',
       description: 'We design, fabricate, and install custom industrial racking systems that maximize your vertical storage space and bring order to your warehouse or shop floor. Our range includes selective pallet racks, FIFO flow racks, cantilever racks for long materials, multi-tier shelving, and lean pipe racking for line-side presentation. Every system is engineered to your specific load ratings, SKU dimensions, and throughput requirements — complete with floor-anchoring, safety clips, and aisle-width optimization to comply with storage safety standards and accelerate your picking operations.',
       images: [
         '/images/Rack Works/Picture29.jpg',
@@ -110,6 +114,7 @@ const Services = () => {
     {
       icon: <FaWrench />,
       title: 'Industrial Piping Works',
+      tagline: 'Professional industrial piping installation and maintenance. We provide comprehensive piping solutions for various industrial fluids and gases.',
       description: 'We provide turnkey industrial piping services — covering design, routing, fabrication, installation, pressure testing, and ongoing maintenance for systems carrying compressed air, hydraulic oil, coolant, water, steam, and process gases. Our piping solutions utilize GI, SS, MS, CPVC, and HDPE materials selected to match your pressure ratings, temperature ranges, and fluid compatibility requirements. From header manifold fabrication to valve station assembly and leak-proof joint execution, we ensure your fluid distribution network operates at peak efficiency with minimal pressure drop and zero unplanned leaks.',
       images: [
         '/images/Industrial Piping Works/Picture35.jpg',
@@ -121,6 +126,7 @@ const Services = () => {
     {
       icon: <FaFilter />,
       title: 'Filter Works',
+      tagline: 'Advanced filtration systems and solutions for industrial applications. We provide comprehensive filter installation, maintenance, and supply services for various industrial filtration needs.',
       description: 'We offer a comprehensive range of industrial filtration and fluid-conditioning solutions designed to extend equipment life, improve product quality, and reduce unplanned downtime. From conventional depth filters and high-pressure hydraulic housings to advanced centrifuge separators, vacuum dehydrators, and coalescing units — we supply, install, and service filtration systems tailored to your hydraulic, lubrication, coolant, and process-fluid circuits. Backed by on-site oil analysis and component cleanliness testing, our solutions help you achieve and maintain the ISO cleanliness levels your OEM specifications demand.',
       categories: [
         {
@@ -223,6 +229,7 @@ const Services = () => {
     {
       icon: <FaShoppingCart />,
       title: 'Materials Trading',
+      tagline: 'Supply of quality industrial materials and components. We stock and supply a wide range of materials for various industrial applications.',
       description: 'We are a trusted supply partner for a wide range of industrial materials and building products — sourced from reputed manufacturers and stocked for rapid dispatch. From pipe fittings and valves for your fluid-handling infrastructure, to steel wire ropes for lifting and rigging, industrial-grade adhesive tapes, insulated PUF panels, pre-painted roofing and cladding sheets, and precision aluminum extrusion profiles — we supply quality-certified materials that meet IS, ASTM, and DIN specifications. Our materials trading division ensures you get the right grade, the right quantity, and competitive pricing with reliable delivery timelines.',
       categories: [
         {
@@ -322,7 +329,7 @@ const Services = () => {
               <div className="service-icon-large">{services[activeService].icon}</div>
               <div>
                 <h2 className="service-title">{services[activeService].title}</h2>
-                <p className="service-description">{services[activeService].description}</p>
+                <p className="service-description">{services[activeService].tagline}</p>
               </div>
             </div>
 
