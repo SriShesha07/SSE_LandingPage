@@ -2,6 +2,11 @@
    SERVICES PAGE STYLES
    =================================== */
 
+.services-page {
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
 /* Hero Section */
 .services-hero {
     background: var(--gradient-primary);
@@ -407,6 +412,19 @@
 
     .service-title {
         font-size: var(--font-size-2xl);
+    }
+
+    .service-tab {
+        min-width: 90px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .tab-icon {
+        font-size: 1rem;
+    }
+
+    .tab-title {
+        font-size: 0.75rem;
     }
 
     .category-images,

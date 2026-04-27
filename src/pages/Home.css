@@ -472,6 +472,7 @@
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: var(--spacing-lg);
     }
 
     .hero-buttons .btn {
