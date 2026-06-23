@@ -116,6 +116,7 @@
 /* About Preview */
 .about-preview {
     background: var(--color-white);
+    overflow: hidden;
 }
 
 .about-preview-grid {

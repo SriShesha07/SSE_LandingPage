@@ -12,6 +12,9 @@ const Contact = () => {
   });
 
   const [formStatus, setFormStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const formEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
   const handleChange = (e) => {
     setFormData({
@@ -20,11 +23,56 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic would go here
-    setFormStatus('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+
+    if (!formEndpoint) {
+      setFormStatus({
+        type: 'error',
+        message: 'The contact form is not configured yet. Please call or email us directly.'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setFormStatus('');
+
+    try {
+      const submission = new FormData(e.currentTarget);
+      submission.append('_subject', `Website enquiry: ${formData.subject}`);
+
+      const response = await fetch(formEndpoint, {
+        method: 'POST',
+        body: submission,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        const errorMessage = result?.errors
+          ?.map((error) => error.message)
+          .filter(Boolean)
+          .join(' ');
+
+        throw new Error(errorMessage || 'Your message could not be sent. Please try again.');
+      }
+
+      setFormStatus({
+        type: 'success',
+        message: 'Thank you! Your message has been sent successfully. We will get back to you soon.'
+      });
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    } catch (error) {
+      setFormStatus({
+        type: 'error',
+        message: error.message || 'Your message could not be sent. Please call or email us directly.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -100,6 +148,14 @@ const Contact = () => {
             <div className="contact-form-container">
               <h3>Send Us a Message</h3>
               <form onSubmit={handleSubmit} className="contact-form">
+                <input
+                  type="text"
+                  name="_gotcha"
+                  className="form-honeypot"
+                  tabIndex="-1"
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
                 <div className="form-group">
                   <label htmlFor="name">Full Name *</label>
                   <input
@@ -109,6 +165,8 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    autoComplete="name"
+                    maxLength="100"
                     placeholder="Your name"
                   />
                 </div>
@@ -123,6 +181,8 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      autoComplete="email"
+                      maxLength="254"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -136,6 +196,8 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
+                      autoComplete="tel"
+                      maxLength="30"
                       placeholder="Your phone number"
                     />
                   </div>
@@ -150,6 +212,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
+                    maxLength="150"
                     placeholder="How can we help you?"
                   />
                 </div>
@@ -162,16 +225,26 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    minLength="10"
+                    maxLength="3000"
                     rows="6"
                     placeholder="Tell us more about your requirements..."
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-lg">
-                  <FaPaperPlane /> Send Message
+                <button type="submit" className="btn btn-primary btn-lg" disabled={isSubmitting}>
+                  <FaPaperPlane /> {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
 
-                {formStatus && <p className="form-status">{formStatus}</p>}
+                {formStatus && (
+                  <p
+                    className={`form-status ${formStatus.type}`}
+                    role={formStatus.type === 'error' ? 'alert' : 'status'}
+                    aria-live="polite"
+                  >
+                    {formStatus.message}
+                  </p>
+                )}
               </form>
             </div>
           </div>

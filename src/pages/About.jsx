@@ -45,7 +45,7 @@ const About = () => {
               </p>
             </div>
             <div className="about-image">
-              <img src="/images/Profile Photo/Profile Photo.jpeg" alt="Sri Shakthi Enterprises" />
+              <img src="/images/Profile Photo/Profile Photo.png" alt="Sri Shakthi Enterprises" />
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ const About = () => {
           <div className="team-section">
             <div className="team-card">
               <div className="team-image">
-                <img src="/images/Profile Photo/Profile Photo.jpeg" alt="Sripathi R" />
+                <img src="/images/Profile Photo/Profile Photo.png" alt="Sripathi R" />
               </div>
               <div className="team-info">
                 <h3>Sripathi R</h3>

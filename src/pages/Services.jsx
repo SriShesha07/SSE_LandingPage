@@ -81,7 +81,24 @@ const Services = () => {
         '/images/Fabrication Works/Picture19.jpg',
         '/images/Fabrication Works/Picture20.jpg',
         '/images/Fabrication Works/Picture21.jpg',
-        '/images/Fabrication Works/Picture22.jpg'
+        '/images/Fabrication Works/Picture22.jpg',
+        '/images/Fabrication Works/Picture_2306_1.jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07.jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (1).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (2).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (3).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (4).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (5).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (6).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (7).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (8).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (9).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (10).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (11).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (12).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (13).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.07 (14).jpeg',
+        '/images/Fabrication Works/WhatsApp Image 2026-06-14 at 15.19.08.jpeg'
       ]
     },
     {

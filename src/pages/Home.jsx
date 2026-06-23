@@ -82,7 +82,7 @@ const Home = () => {
         <div className="container">
           <div className="about-preview-grid">
             <div className="about-preview-image animate-slide-left">
-              <img src="/images/Profile Photo/Profile Photo.jpeg" alt="Sri Shakthi Enterprises" />
+              <img src="/images/Profile Photo/Profile Photo.png" alt="Sri Shakthi Enterprises" />
               <div className="image-overlay">
                 <div className="overlay-badge">
                   <span className="badge-number">4</span>
